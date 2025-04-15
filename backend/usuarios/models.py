@@ -14,7 +14,7 @@ class Usuario(AbstractUser):
     TIPO_CHOICES = (
         ('administrador', 'Administrador'),
         ('lector', 'Lector'),
-        ('columnista', 'Columnista'),
+        ('autor', 'autor'),
         ('editor', 'Editor'),
     )
 
