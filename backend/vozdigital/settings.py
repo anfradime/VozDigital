@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # Tus apps
     'usuarios',
     'articulos',
+    'clasificados',
 
     # Frameworks (si los usas)
     'rest_framework',
