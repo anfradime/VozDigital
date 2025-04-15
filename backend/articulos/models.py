@@ -39,3 +39,12 @@ class Articulo(models.Model):
 
     def __str__(self):
         return self.titulo
+
+
+class ImagenArticulo(models.Model):
+    articulo = models.ForeignKey(Articulo, related_name='imagenes', on_delete=models.CASCADE)
+    imagen = models.ImageField(upload_to='articulos/imagenes/')
+    descripcion = models.CharField(max_length=255, blank=True)
+
+    def __str__(self):
+        return f"Imagen para: {self.articulo.titulo}"
