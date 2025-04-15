@@ -13,8 +13,8 @@ class EtiquetaAdmin(admin.ModelAdmin):
 
 @admin.register(Articulo)
 class ArticuloAdmin(admin.ModelAdmin):
-    list_display = ('titulo', 'autor', 'categoria', 'publicado', 'fecha_creacion')
-    list_filter = ('publicado', 'categoria', 'fecha_creacion')
+    list_display = ('titulo', 'autor', 'categoria', 'estado', 'creado')
+    list_filter = ('estado', 'categoria', 'creado')
     search_fields = ('titulo', 'contenido')
     filter_horizontal = ('etiquetas',)
     autocomplete_fields = ('autor',)
