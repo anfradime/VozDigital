@@ -1,5 +1,3 @@
-# VozDigital
-
 # 📰 VozDigital
 
 VozDigital es un periódico digital construido con **Django**, **Vue.js** y **PostgreSQL**, diseñado para ser escalable y modular.
@@ -18,3 +16,12 @@ VozDigital/
     ├── manage.py │ 
     └── vozdigital/ │ 
   ├── frontend/
+
+
+## ⚙️ Instalación local
+
+### Backend
+```bash
+cd backend
+env\Scripts\activate  # o source env/bin/activate en Linux/macOS
+python manage.py runserver
