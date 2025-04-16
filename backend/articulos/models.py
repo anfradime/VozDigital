@@ -30,6 +30,7 @@ class Articulo(models.Model):
     autor = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name='articulos')
     categoria = models.ForeignKey(Categoria, on_delete=models.SET_NULL, null=True, blank=True)
     etiquetas = models.ManyToManyField(Etiqueta, blank=True)
+    video_url = models.URLField(blank=True, null=True, help_text="URL de un video relacionado (YouTube, Vimeo, etc.)")
     creado = models.DateTimeField(default=timezone.now)
     actualizado = models.DateTimeField(auto_now=True)
     estado = models.CharField(max_length=10, choices=ESTADO_CHOICES, default='borrador')

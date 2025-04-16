@@ -17,7 +17,8 @@ class Clasificado(models.Model):
     fecha_publicacion = models.DateTimeField(auto_now_add=True)
     disponible = models.BooleanField(default=True)
     ubicacion = models.CharField(max_length=255, blank=True)
-    
+    video_url = models.URLField(blank=True, null=True, help_text="URL de un video relacionado con el clasificado (YouTube, Vimeo, etc.)")
+
     def __str__(self):
         return self.titulo
 
